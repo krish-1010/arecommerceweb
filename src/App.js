@@ -1,12 +1,15 @@
 import "./App.css";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route } from "react-router-dom";
 import Products from "./components/Products";
 import Product from "./components/Product";
+import Dragon from "./components/Dragon";
 import Cart from "./components/Cart";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import Laptop from "./components/Laptop";
+import Flowerpot from "./components/Flowerpot";
 function App() {
   return (
     <>
@@ -18,6 +21,9 @@ function App() {
         <Route exact path="/cart" component={Cart} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
+        <Route exact path="/dragon" component={Dragon} />
+        <Route exact path="/laptop" component={Laptop} />
+        <Route exact path="/plant" component={Flowerpot} />
       </Switch>
     </>
   );

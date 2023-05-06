@@ -2,6 +2,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import CartProduct from "./cart/CartProduct";
+import { PayPalButton } from "react-paypal-button-v2";
 
 export default function Cart() {
   const state = useSelector((state) => state.handleCart);
@@ -36,6 +37,20 @@ export default function Cart() {
             total += x.sub_total;
           })}
           <div className="total"> ₹ {parseFloat(total).toFixed(2)}</div>
+          {total>0?
+          <PayPalButton
+        amount={10}
+        // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
+        onSuccess={(details, data) => {
+          alert("Transaction completed by " );
+
+                    
+        }}
+        options={{
+          clientId: "AVKG0QDzI8XrF3yO3YfgRJebh_E8DW9v7XYl3SjxjG29-btN8Wrm-SJxCu9Zett5oJGzXjPX6Fd3d2fB"
+        }}
+      />
+          :<div>no</div>}
         </div>
       </div>
     </div>

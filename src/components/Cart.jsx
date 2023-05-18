@@ -42,9 +42,7 @@ export default function Cart() {
         amount={10}
         // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
         onSuccess={(details, data) => {
-          alert("Transaction completed by " );
-
-                    
+          alert("Transaction completed by user" );       
         }}
         options={{
           clientId: "AVKG0QDzI8XrF3yO3YfgRJebh_E8DW9v7XYl3SjxjG29-btN8Wrm-SJxCu9Zett5oJGzXjPX6Fd3d2fB"
